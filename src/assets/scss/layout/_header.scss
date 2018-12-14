@@ -58,6 +58,8 @@
 			max-width: 100%;
 
 			.inner {
+				display:flex;
+				flex-direction: column;
 				@include vendor('transition', (
 					'max-height #{_duration(intro)} ease',
 					'padding #{_duration(intro)} ease',
@@ -78,6 +80,7 @@
 				letter-spacing: _font(letter-spacing);
 				font-size: 0.8rem;
 				line-height: 2;
+				margin-bottom: .4rem;
 			}
 		}
 

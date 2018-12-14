@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import pic02 from '../images/pic02.jpg'
+import HHmockup from '../images/HHmockup.png'
+import BHmockup from '../images/BHmockup.png'
 import ProfilePic from '../images/ProfilePic.jpg';
 
 import Redux from '../images/Redux.png'
@@ -102,10 +103,11 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Work</h2>
-          <span className="image main">
-            <img src={pic02} alt="" />
-          </span>
+          <a className="image main" href="https://hack-hub.tech" rel="noopener noreferrer"  target="_blank">
+            <img src={HHmockup} alt="" />
+          </a>
           <h3>Hack Hub</h3>
+          <a href="https://hack-hub.tech" rel="noopener noreferrer"  target="_blank">hack-hub.tech</a>
           <p>
             Hack-Hub is a web application that recreates the Reddit style of
             content sharing but it’s built specifically for developers.
@@ -116,10 +118,11 @@ class Main extends React.Component {
             <br />- Also utilized HTML, CSS, Javascript, React.js, Node,
             Express, and SQL.
           </p>
-          <span className="image main">
-            <img src={pic02} alt="" />
-          </span>
+          <a className="image main" href="https://better-habits.life" rel="noopener noreferrer"  target="_blank">
+            <img src={BHmockup} alt="" />
+          </a>
           <h3>Better Habits</h3>
+          <a href="https://better-habits.life" rel="noopener noreferrer"  target="_blank">better-habits.life</a>
           <p>
             Better Habits is a web application designed to help users be more
             mindful about their actions and help them make and keep habits.<br />

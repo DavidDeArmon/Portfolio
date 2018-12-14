@@ -9,9 +9,9 @@ const Header = (props) => (
         <div className="content">
             <div className="inner">
                 <h1>David DeArmon</h1>
-                <p>Fullstack Web Developer<br />
-                    <a href="https://github.com/DavidDeArmon" target="_blank"  rel="noopener noreferrer">Github</a><br />
-                <a href="https://www.linkedin.com/in/david-dearmon/" target="_blank"  rel="noopener noreferrer">LinkedIn</a></p>
+                <p>Fullstack Web Developer</p>
+                <p><a href="https://github.com/DavidDeArmon" target="_blank"  rel="noopener noreferrer">Github</a></p>
+                <p><a href="https://www.linkedin.com/in/david-dearmon/" target="_blank"  rel="noopener noreferrer">LinkedIn</a></p>
             </div>
         </div>
         <nav>
