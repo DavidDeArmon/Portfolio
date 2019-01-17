@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import HHmockup from '../images/HHmockup.png'
 import BHmockup from '../images/BHmockup.png'
 import ProfilePic from '../images/ProfilePic.jpg';
+import WebsiteGif from '../images/Sentence800x600.gif'
 
 import Redux from '../images/Redux.png'
 import css3originalwordmark from '../assets/tech-icons/css3/css3originalwordmark.svg'
@@ -133,6 +134,17 @@ class Main extends React.Component {
             <br />
             -Also utilized HTML, CSS, Javascript, React.js, Redux, Node,
             Express, and SQL.
+            <br />
+          </p>
+            <a className="image main">
+              <img src={WebsiteGif} alt="" />
+            </a>
+          <h3>Gif Sentence Creator</h3>
+          <a href="https://github.com/DavidDeArmon/noDB" rel="noopener noreferrer"  target="_blank">GitHub Repository</a>
+          <p>
+            This is a simple application that utilizes the GIPHY API to allow users to create sentences using Gifs!
+            This is an early project of mine and it is an example of a merely front end application. There was no need for a database or back-end in this case.
+            This app was built using React and axios.
             <br />
           </p>
           {close}
