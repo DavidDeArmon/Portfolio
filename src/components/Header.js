@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Header = (props) => (
-    <header id="header" style={props.timeout ? {display: 'none'} : {}}>
+    <header id="header" style={props.isArticleVisible ? {display: 'none'} : {}}>
         <div className="content">
             <div className="inner">
                 <h1>David DeArmon</h1>
@@ -13,10 +13,10 @@ const Header = (props) => (
         </div>
         <nav>
             <ul>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('skills')}}>Skills</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('work')}}>Work</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
+                <li><a role="button" href="#skills" onClick={(e) => {props.onOpenArticle('skills',e)}}>Skills</a></li>
+                <li><a role="button" href="#work" onClick={(e) => {props.onOpenArticle('work',e)}}>Work</a></li>
+                <li><a role="button" href="#about" onClick={(e) => {props.onOpenArticle('about',e)}}>About</a></li>
+                <li><a role="button" href="#contact" onClick={(e) => {props.onOpenArticle('contact',e)}}>Contact</a></li>
             </ul>
         </nav>
     </header>

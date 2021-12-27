@@ -120,6 +120,26 @@
 							background-color: _palette(border-bg-alt);
 						}
 					}
+					
+					button {
+						display: block;
+						min-width: 7.5rem;
+						height: 2.75rem;
+						line-height: 2.75rem;
+						padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
+						text-transform: uppercase;
+						letter-spacing: _font(letter-spacing);
+						font-size: 0.8rem;
+						border-bottom: 0;
+
+						&:hover {
+							background-color: _palette(border-bg);
+						}
+
+						&:active {
+							background-color: _palette(border-bg-alt);
+						}
+					}
 				}
 			}
 

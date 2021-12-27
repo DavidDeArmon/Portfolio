@@ -25,20 +25,11 @@ import electronoriginalwordmark from '../assets/tech-icons/electron/electronorig
 
 class Main extends React.Component {
   render() {
-    let close = (
-      <div
-        className="close"
-        onClick={() => {
-          this.props.onCloseArticle()
-        }}
-      />
-    )
-
     return (
       <div
-        ref={this.props.setWrapperRef}
         id="main"
-        style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
+        style={this.props.isArticleVisible ? { display: 'flex' } : { display: 'none' }}
+        ref={wrapperRef=>this.wrapperRef=wrapperRef}
       >
         <article
           id="skills"
@@ -92,7 +83,6 @@ class Main extends React.Component {
               <img className="skills-icons" src ={electronoriginalwordmark} alt="Electron"/>
             </li>
           </ul>
-          {close}
         </article>
 
 
@@ -136,9 +126,9 @@ class Main extends React.Component {
             Express, and SQL.
             <br />
           </p>
-            <a className="image main">
+            <span className="image main">
               <img src={WebsiteGif} alt="" />
-            </a>
+            </span>
           <h3>Gif Sentence Creator</h3>
           <a href="https://github.com/DavidDeArmon/noDB" rel="noopener noreferrer"  target="_blank">GitHub Repository</a>
           <p>
@@ -147,15 +137,11 @@ class Main extends React.Component {
             This app was built using React and axios.
             <br />
           </p>
-          {close}
         </article>
 
-        <article
+       {this.props.article === "about" && this.props.isArticleVisible && <article
           id="about"
-          className={`${this.props.article === 'about' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
-          style={{ display: 'none' }}
+          className={`${this.props.article === 'about' ? 'active' : ''}`}
         >
           <h2 className="major">About</h2>
           <span className="image main">
@@ -164,8 +150,7 @@ class Main extends React.Component {
           <p>
           I am a full-stack web developer. After working towards electrical engineering for a couple years I discovered my passion for code. I graduated with my associates from Utah Valley University and went through DevMountain's web development program. When I'm not at work I like to get involved with technology with computer hardware and video games or participate in my community by volunteering.
           </p>
-          {close}
-        </article>
+        </article>}
 
         <article
           id="contact"
@@ -209,7 +194,6 @@ class Main extends React.Component {
               </a>
             </li>
           </ul>
-          {close}
         </article>
       </div>
     )
@@ -222,7 +206,7 @@ Main.propTypes = {
   articleTimeout: PropTypes.bool,
   onCloseArticle: PropTypes.func,
   timeout: PropTypes.bool,
-  setWrapperRef: PropTypes.func.isRequired,
+  //setWrapperRef: PropTypes.func.isRequired,
 }
 
 export default Main
