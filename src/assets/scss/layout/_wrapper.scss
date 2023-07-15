@@ -12,8 +12,7 @@
 		@include vendor('align-items', 'center');
 		@include vendor('justify-content', 'space-between');
 		position: relative;
-		min-height: 100vh;
-		width: 100vw;
+		top:50%;
 		padding: 4rem 2rem;
 		z-index: 3;
 
@@ -35,6 +34,7 @@
 		}
 
 		&.page {
-			@include vendor('justify-content', 'flex-start');
+			@include vendor('justify-content', 'center');
+			height: 100vh;
 		}
 	}

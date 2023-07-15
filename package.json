@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-dimension-v2",
+  "name": "david-dearmon-portfolio",
   "description": "David DeArmon Portfolio",
   "version": "1.0.0",
   "dependencies": {
@@ -30,6 +30,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/DavidDeArmon/Portfolio.git"
   }
 }
