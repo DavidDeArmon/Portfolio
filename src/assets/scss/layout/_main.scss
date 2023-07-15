@@ -7,19 +7,18 @@
 /* Main */
 
 	#main {
+		@include vendor('display', 'flex');
+		@include vendor('flex-direction', 'column');
 		@include vendor('flex-grow', '1');
 		@include vendor('flex-shrink', '1');
-		@include vendor('display', 'flex');
-		@include vendor('align-items', 'center');
-		@include vendor('justify-content', 'center');
-		@include vendor('flex-direction', 'column');
 		position: relative;
 		max-width: 100%;
+		max-height: 90%;
 		z-index: 3;
 		display: none;
 
 		article {
-			@include vendor('transform', 'translateY(0.25rem)');
+			// @include vendor('transform', 'translateY(0.25rem)');
 			@include vendor('transition', (
 				'opacity #{_duration(article)} ease-in-out',
 				'transform #{_duration(article)} ease-in-out'

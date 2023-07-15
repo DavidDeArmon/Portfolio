@@ -1,9 +1,9 @@
 import React from 'react'
-import HomePage from '../components/HomePage'
+import Main from '../components/Main'
 
 function IndexPage() {
   return (
-    <HomePage />
+    <Main />
   )
 }
 
