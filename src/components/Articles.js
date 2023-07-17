@@ -7,6 +7,8 @@ import ProfilePic from '../images/ProfilePic.jpg';
 import WebsiteGif from '../images/Sentence800x600.gif'
 
 import Redux from '../images/Redux.png'
+import csharpicon from '../assets/tech-icons/csharp/csharp-svgrepo-com.svg'
+import dotneticon from '../assets/tech-icons/dotnet/dot-net-svgrepo-com.svg'
 import css3originalwordmark from '../assets/tech-icons/css3/css3originalwordmark.svg'
 import reactoriginalwordmark from '../assets/tech-icons/react/reactoriginalwordmark.svg'
 import javascriptoriginal from '../assets/tech-icons/javascript/javascriptoriginal.svg'
@@ -40,6 +42,12 @@ class Articles extends React.Component {
         >
           <h2 className="major">Skills</h2>
           <ul className="skills-list">
+          <li className="skills" >
+              <img className="skills-icons" src ={dotneticon} alt="Dot Net" />
+            </li>
+            <li className="skills" >
+              <img className="skills-icons" src ={csharpicon} alt="C Sharp" />
+            </li>
             <li className="skills" >
               <img className="skills-icons" src ={reactoriginalwordmark} alt="React" />
             </li>
@@ -93,7 +101,7 @@ class Articles extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Work</h2>
+          <h2 className="major">Projects</h2>
           <a className="image main" href="https://github.com/Hack-Hub/Hack-Hub" rel="noopener noreferrer"  target="_blank">
             <img src={HHmockup} alt="" />
           </a>
@@ -148,53 +156,12 @@ class Articles extends React.Component {
             <img src={ProfilePic} alt="" />
           </span>
           <p>
-          I am a full-stack web developer. After working towards electrical engineering for a couple years I discovered my passion for code. I graduated with my associates from Utah Valley University and went through DevMountain's web development program. When I'm not at work I like to get involved with technology with computer hardware and video games or participate in my community by volunteering.
+          I am a Full-stack Software and Web Developer with over 4 years of professional experience. I discovered my passion for programming while working towards a degree in electrical engineering. 
+          I quickly graduated with my associates of science from Utah Valley University and went through DevMountain's web development program. 
+          When I'm not at work I like to get involved with technology with computer hardware and video games, participate in my community by volunteering, or appreciating some good driving roads.
           </p>
         </article>}
-
-        <article
-          id="contact"
-          className={`${this.props.article === 'contact' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
-          style={{ display: 'none' }}
-        >
-          <h2 className="major">Contact</h2>
-          <form method="post" action="https://formspree.io/david.dearmon@gmail.com">
-            <div className="field half first">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div className="field half">
-              <label htmlFor="email">Email</label>
-              <input type="email" name="_replyto" id="email" />
-            </div>
-            <div className="field">
-              <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4" />
-            </div>
-            <ul className="actions">
-              <li>
-                <input type="submit" value="Send" className="special" />
-              </li>
-              <li>
-                <input type="reset" value="Reset" />
-              </li>
-            </ul>
-          </form>
-          <ul className="icons">
-            <li>
-              <a href="https://www.linkedin.com/in/david-dearmon/" className="icon fa-linkedin"  rel="noopener noreferrer"  target="_blank">
-                <span className="label">LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/DavidDeArmon" className="icon fa-github"  rel="noopener noreferrer" target="_blank">
-                <span className="label">GitHub</span>
-              </a>
-            </li>
-          </ul>
-        </article>
+     
       </div>
     )
   }
