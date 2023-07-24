@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import HHmockup from '../images/HHmockup.png'
-import BHmockup from '../images/BHmockup.png'
-import ProfilePic from '../images/ProfilePic.jpg';
-import WebsiteGif from '../images/Sentence800x600.gif'
+import HHmockup from '../assets/images/HHmockup.png'
+import BHmockup from '../assets/images/BHmockup.png'
+import ProfilePic from '../assets/images/ProfilePic.jpg';
+import SentenceGenWebm from '../assets/images/Sentence800x600.webm'
+import SentenceGenMP4 from '../assets/images/Sentence800x600.mp4'
 
-import Redux from '../images/Redux.png'
+import Redux from '../assets/images/Redux.png'
 import csharpicon from '../assets/tech-icons/csharp/csharp-svgrepo-com.svg'
 import dotneticon from '../assets/tech-icons/dotnet/dot-net-svgrepo-com.svg'
 import css3originalwordmark from '../assets/tech-icons/css3/css3originalwordmark.svg'
@@ -134,9 +135,10 @@ class Articles extends React.Component {
             Express, and SQL.
             <br />
           </p>
-            <span className="image main">
-              <img src={WebsiteGif} alt="" />
-            </span>
+              <video width="95%" autoPlay={true} loop={true} muted={true} playsInline={true}>
+                <source src={SentenceGenWebm} type='video/webm'/>
+                <source src={SentenceGenMP4} type='video/mp4'/>
+              </video>
           <h3>Gif Sentence Creator</h3>
           <a href="https://github.com/DavidDeArmon/noDB" rel="noopener noreferrer"  target="_blank">GitHub Repository</a>
           <p>
