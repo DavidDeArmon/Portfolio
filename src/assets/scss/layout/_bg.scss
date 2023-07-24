@@ -1,68 +1,164 @@
-///
-/// Dimension by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
+/* BG and BG Animation*/
 
-/* BG */
 
-	#bg {
-		@include vendor('transform', 'scale(1.0)');
-		-webkit-backface-visibility: hidden;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		z-index: 1;
+.area {
+	background: #283c86;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #45a247, #283c86);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #45a247, #283c86);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
 
-		&:before, &:after {
-			content: '';
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
+	&:before {
+		@include vendor('transition', 'background-color #{_duration(bg)} ease-in-out');
+		@include vendor('transition-delay', '#{_duration(intro)}');
+		background-image: linear-gradient(to top, #{_palette(bg-overlay)}, #{_palette(bg-overlay)}),
+		url('../../images/overlay.png');
+		background-size: auto,
+			256px 256px;
+		background-position: center,
+			center;
+		background-repeat: no-repeat,
+			repeat;
+		z-index: 2;
+	}
 
-		&:before {
-			@include vendor('transition', 'background-color #{_duration(bg)} ease-in-out');
-			@include vendor('transition-delay', '#{_duration(intro)}');
-			background-image:		linear-gradient(to top, #{_palette(bg-overlay)}, #{_palette(bg-overlay)}),
-									url('../../images/overlay.png');
-			background-size:		auto,
-									256px 256px;
-			background-position:	center,
-									center;
-			background-repeat:		no-repeat,
-									repeat;
-			z-index: 2;
-		}
-
-		&:after {
-			@include vendor('transform', 'scale(1.125)');
-			@include vendor('transition', (
-				'transform #{_duration(article)} ease-in-out',
+	&:after {
+		@include vendor('transform', 'scale(1.125)');
+		@include vendor('transition', ('transform #{_duration(article)} ease-in-out',
 				'filter #{_duration(article)} ease-in-out'
 			));
-			background-image:		url('../../images/bg.jpg');
-			background-position:	center;
-			background-size:		cover;
-			background-repeat:		no-repeat;
-			z-index: 1;
-		}
+		z-index: 1;
+	}
 
-		.body.is-article-visible & {
-			&:after {
-				@include vendor('transform', 'scale(1.0825)');
-				@include vendor('filter', 'blur(0.2rem)');
-			}
-		}
-
-		.body.is-loading & {
-			&:before {
-				background-color:	_palette(bg-alt);
-			}
+	.body.is-article-visible & {
+		&:after {
+			@include vendor('transform', 'scale(1.0825)');
+			@include vendor('filter', 'blur(0.2rem)');
 		}
 	}
+
+	.body.is-loading & {
+		&:before {
+			background-color: _palette(bg-alt);
+		}
+	}
+}
+
+.circles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.circles li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 20px;
+	height: 20px;
+	background: rgba(255, 255, 255, 0.2);
+	animation: animate 25s linear infinite;
+	bottom: -150px;
+
+}
+
+.circles li:nth-child(1) {
+	left: 25%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+	left: 10%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 2s;
+	animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+	left: 70%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+	left: 40%;
+	width: 60px;
+	height: 60px;
+	animation-delay: 0s;
+	animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+	left: 65%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+	left: 75%;
+	width: 110px;
+	height: 110px;
+	animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+	left: 35%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+	left: 50%;
+	width: 25px;
+	height: 25px;
+	animation-delay: 15s;
+	animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+	left: 20%;
+	width: 15px;
+	height: 15px;
+	animation-delay: 2s;
+	animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+	left: 85%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 0s;
+	animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+		border-radius: 0;
+	}
+
+	100% {
+		transform: translateY(-1000px) rotate(720deg);
+		opacity: 0;
+		border-radius: 50%;
+	}
+
+}

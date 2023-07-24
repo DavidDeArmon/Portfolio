@@ -30,26 +30,32 @@ class Main extends React.Component {
             })
         }
     }
-    // handleClickOutside() {
-    //     if (this.state.isArticleVisible === true) {
-    //         this.setState({
-    //             isArticleVisible: false
-    //         })
-    //     }
-    // }
     render() {
         return (
             <Layout location={this.props.location} >
-                    <div className={`body ${this.state.isArticleVisible ? 'is-article-visible' : ''}`} role="none" id="wrapper"  onClick={this.handleCloseArticle} onKeyDown={this.handleCloseArticle}>
+                <div className="area" >
+                    <div className={`body ${this.state.isArticleVisible ? 'is-article-visible' : ''}`} role="none" id="wrapper" onClick={this.handleCloseArticle} onKeyDown={this.handleCloseArticle}>
                         <Header onOpenArticle={this.handleOpenArticle} isArticleVisible={this.state.isArticleVisible} />
-                            <Articles
-                                isArticleVisible={this.state.isArticleVisible}
-                                article={this.state.article}
-                                onCloseArticle={this.handleCloseArticle}
-                            />
+                        <Articles
+                            isArticleVisible={this.state.isArticleVisible}
+                            article={this.state.article}
+                            onCloseArticle={this.handleCloseArticle}
+                        />
                         <Footer />
                     </div>
-                    <div id="bg"></div>
+                    <ul className="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div >
             </Layout>
         )
     }
