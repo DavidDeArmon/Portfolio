@@ -11,9 +11,9 @@
 		@include vendor('flex-direction', 'column');
 		@include vendor('align-items', 'center');
 		@include vendor('justify-content', 'space-between');
+		@include vendor('justify-content', 'center');
+		height: 100vh;
 		position: relative;
-		min-height: 100vh;
-		width: 100vw;
 		padding: 4rem 2rem;
 		z-index: 3;
 
@@ -35,6 +35,6 @@
 		}
 
 		&.page {
-			@include vendor('justify-content', 'flex-start');
+			
 		}
 	}

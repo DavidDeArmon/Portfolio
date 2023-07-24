@@ -1,16 +1,14 @@
 {
-  "name": "gatsby-starter-dimension-v2",
+  "name": "david-dearmon-portfolio",
   "description": "David DeArmon Portfolio",
   "version": "1.0.0",
   "dependencies": {
     "ansi-html-community": "^0.0.8",
     "gatsby": "^4.4.0",
     "gatsby-plugin-manifest": "^4.4.0",
-    "gatsby-plugin-react-helmet": "^5.4.0",
     "gatsby-plugin-sass": "^5.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
     "trim": "^1.0.1",
     "ws": "^8.4.0"
   },
@@ -30,6 +28,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/DavidDeArmon/Portfolio.git"
   }
 }
