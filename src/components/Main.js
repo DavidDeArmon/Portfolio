@@ -15,7 +15,6 @@ class Main extends React.Component {
         }
         this.handleOpenArticle = this.handleOpenArticle.bind(this)
         this.handleCloseArticle = this.handleCloseArticle.bind(this)
-        // this.handleClickOutside = this.handleClickOutside.bind(this)
     }
     handleOpenArticle(article) {
         this.setState({

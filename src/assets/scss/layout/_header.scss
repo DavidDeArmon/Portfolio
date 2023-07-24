@@ -120,6 +120,9 @@
 					
 					button {
 						display: block;
+						font: inherit;
+						color: inherit;
+						background-color: inherit;
 						min-width: 7.5rem;
 						height: 2.75rem;
 						line-height: 2.75rem;
@@ -127,7 +130,7 @@
 						text-transform: uppercase;
 						letter-spacing: _font(letter-spacing);
 						font-size: 0.8rem;
-						border-bottom: 0;
+						border: 0;
 
 						&:hover {
 							background-color: _palette(border-bg);
@@ -252,6 +255,12 @@
 						}
 
 						a {
+							height: 3rem;
+							line-height: 3rem;
+							min-width: 0;
+							width: 100%;
+						}
+						button {
 							height: 3rem;
 							line-height: 3rem;
 							min-width: 0;

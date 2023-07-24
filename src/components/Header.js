@@ -23,9 +23,9 @@ const Header = (props) => (
         </div>
         <nav>
             <ul>
-                <li><a role="button" href="#skills" onClick={(e) => { props.onOpenArticle('skills', e) }}>Skills</a></li>
-                <li><a role="button" href="#work" onClick={(e) => { props.onOpenArticle('work', e) }}>Projects</a></li>
-                <li><a role="button" href="#about" onClick={(e) => { props.onOpenArticle('about', e) }}>About</a></li>
+                <li><button onClick={(e) => { props.onOpenArticle('skills', e) }}>Skills</button></li>
+                <li><button onClick={(e) => { props.onOpenArticle('work', e) }}>Projects</button></li>
+                <li><button onClick={(e) => { props.onOpenArticle('about', e) }}>About</button></li>
             </ul>
         </nav>
     </header>
