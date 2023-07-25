@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withPrefix } from 'gatsby'
 
 import HHmockup from '../assets/images/HHmockup.png'
 import BHmockup from '../assets/images/BHmockup.png'
@@ -44,52 +45,52 @@ class Articles extends React.Component {
           <h2 className="major">Skills</h2>
           <ul className="skills-list">
           <li className="skills" >
-              <img className="skills-icons" src ={dotneticon} alt="Dot Net" />
+              <img className="skills-icons" src ={withPrefix(dotneticon)} alt="Dot Net" />
             </li>
             <li className="skills" >
-              <img className="skills-icons" src ={csharpicon} alt="C Sharp" />
+              <img className="skills-icons" src ={withPrefix(csharpicon)} alt="C Sharp" />
             </li>
             <li className="skills" >
-              <img className="skills-icons" src ={reactoriginalwordmark} alt="React" />
+              <img className="skills-icons" src ={withPrefix(reactoriginalwordmark)} alt="React" />
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={javascriptoriginal} alt="Javascript"/>
+              <img className="skills-icons" src ={withPrefix(javascriptoriginal)} alt="Javascript"/>
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={html5originalwordmark} alt="HTML5"/>
+              <img className="skills-icons" src ={withPrefix(html5originalwordmark)} alt="HTML5"/>
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={css3originalwordmark} alt="CSS3"/>
+              <img className="skills-icons" src ={withPrefix(css3originalwordmark)} alt="CSS3"/>
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={nodejsoriginalwordmark} alt="Node.js"/>
+              <img className="skills-icons" src ={withPrefix(nodejsoriginalwordmark)} alt="Node.js"/>
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={Redux} alt="Redux"/>
+              <img className="skills-icons" src ={withPrefix(Redux)} alt="Redux"/>
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={gitoriginalwordmark} alt="Git/Github"/>
+              <img className="skills-icons" src ={withPrefix(gitoriginalwordmark)} alt="Git/Github"/>
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={postgresqloriginalwordmark} alt="Postgres"/>
+              <img className="skills-icons" src ={withPrefix(postgresqloriginalwordmark)} alt="Postgres"/>
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={sassoriginal} alt="SASS"/>
+              <img className="skills-icons" src ={withPrefix(sassoriginal)} alt="SASS"/>
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={webpackoriginalwordmark} alt="Webpack"/>
+              <img className="skills-icons" src ={withPrefix(webpackoriginalwordmark)} alt="Webpack"/>
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={visualstudioplainwordmark} alt="Visual Studio"/>
+              <img className="skills-icons" src ={withPrefix(visualstudioplainwordmark)} alt="Visual Studio"/>
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={amazonwebservicesoriginalwordmark} alt="Amazon Web Services"/>
+              <img className="skills-icons" src ={withPrefix(amazonwebservicesoriginalwordmark)} alt="Amazon Web Services"/>
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={expressoriginalwordmark} alt="Express"/>
+              <img className="skills-icons" src ={withPrefix(expressoriginalwordmark)} alt="Express"/>
             </li>
             <li className="skills">
-              <img className="skills-icons" src ={electronoriginalwordmark} alt="Electron"/>
+              <img className="skills-icons" src ={withPrefix(electronoriginalwordmark)} alt="Electron"/>
             </li>
           </ul>
         </article>
@@ -104,7 +105,7 @@ class Articles extends React.Component {
         >
           <h2 className="major">Projects</h2>
           <a className="image main" href="https://github.com/Hack-Hub/Hack-Hub" rel="noopener noreferrer"  target="_blank">
-            <img src={HHmockup} alt="" />
+            <img src={withPrefix(HHmockup)} alt="" />
           </a>
           <h3>Hack Hub</h3>
           <a href="https://github.com/Hack-Hub/Hack-Hub" rel="noopener noreferrer"  target="_blank">hack-hub.tech</a>
@@ -119,7 +120,7 @@ class Articles extends React.Component {
             Express, and SQL.
           </p>
           <a className="image main" href="https://github.com/DavidDeArmon/Better-Habits" rel="noopener noreferrer"  target="_blank">
-            <img src={BHmockup} alt="" />
+            <img src={withPrefix(BHmockup)} alt="" />
           </a>
           <h3>Better Habits</h3>
           <a href="https://github.com/DavidDeArmon/Better-Habits" rel="noopener noreferrer"  target="_blank">better-habits.life</a>
@@ -136,8 +137,8 @@ class Articles extends React.Component {
             <br />
           </p>
               <video width="95%" autoPlay={true} loop={true} muted={true} playsInline={true}>
-                <source src={SentenceGenWebm} type='video/webm'/>
-                <source src={SentenceGenMP4} type='video/mp4'/>
+                <source src={withPrefix(SentenceGenWebm)} type='video/webm'/>
+                <source src={withPrefix(SentenceGenMP4)} type='video/mp4'/>
               </video>
           <h3>Gif Sentence Creator</h3>
           <a href="https://github.com/DavidDeArmon/noDB" rel="noopener noreferrer"  target="_blank">GitHub Repository</a>
@@ -155,7 +156,7 @@ class Articles extends React.Component {
         >
           <h2 className="major">About</h2>
           <span className="image main">
-            <img src={ProfilePic} alt="" />
+            <img src={withPrefix(ProfilePic)} alt="" />
           </span>
           <p>
           I am a Full-stack Software and Web Developer with over 4 years of professional experience. I discovered my passion for programming while working towards a degree in electrical engineering. 
