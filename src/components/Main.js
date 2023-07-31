@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from './layout'
 import Header from './Header'
 import Articles from './Articles'
-import Footer from './Footer'
 class Main extends React.Component {
     constructor(props) {
         super(props)
@@ -40,7 +39,6 @@ class Main extends React.Component {
                             article={this.state.article}
                             onCloseArticle={this.handleCloseArticle}
                         />
-                        <Footer />
                     </div>
                     <ul className="circles">
                         <li></li>

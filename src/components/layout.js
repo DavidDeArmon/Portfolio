@@ -22,6 +22,7 @@ const Layout = ({ children }) => {
           <>
             <title>{data.site.siteMetadata.title}</title>
             <meta name="description" content="Sample"/>
+            <html lang="en" />
           </>
           {children}
         </>
